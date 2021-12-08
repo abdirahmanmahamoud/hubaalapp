@@ -18,7 +18,11 @@ lacagta();
           if(status){
              per.forEach(item =>{
                 for(let i in item){
-                   html += `<h3 class="f-w-300 d-flex align-items-center m-b-0">${item[i]}</h3>`;
+                  if(item[i] == null){
+                     html += `<h3 class="f-w-300 d-flex align-items-center m-b-0">0</h3>`;
+                  }else{
+                     html += `<h3 class="f-w-300 d-flex align-items-center m-b-0">${item[i]}</h3>`;
+                  }
                 }
                
              })
@@ -48,7 +52,11 @@ lacagta();
           if(status){
              per.forEach(item =>{
                 for(let i in item){
-                   html += `<h3 class="f-w-300 d-flex align-items-center m-b-0">$${item[i]}</h3>`;
+                   if(item[i] == null){
+                   html += `<h3 class="f-w-300 d-flex align-items-center m-b-0">$0</h3>`;
+                   }else{
+                     html += `<h3 class="f-w-300 d-flex align-items-center m-b-0">$${item[i]}</h3>`
+                   }
                 }
                
              })
@@ -78,7 +86,11 @@ lacagta();
           if(status){
              per.forEach(item =>{
                 for(let i in item){
-                   html += `<h3 class="f-w-300 d-flex align-items-center m-b-0">$${item[i]}</h3>`;
+                  if(item[i] == null){
+                     html += `<h3 class="f-w-300 d-flex align-items-center m-b-0">$0</h3>`;
+                  }else{
+                     html += `<h3 class="f-w-300 d-flex align-items-center m-b-0">$${item[i]}</h3>`;
+                  }
                 }
                
              })

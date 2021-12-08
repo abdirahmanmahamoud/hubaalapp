@@ -46,7 +46,7 @@ function alaabta_iib($db){
         if($ra){
             $row = $ra->fetch_assoc();
                 $inta_hartay = $row['inta_hartay'];
-                if($inta_xabu < $inta_hartay){
+                if($inta_xabu <= $inta_hartay){
                     $se = "SELECT * FROM `alaabta_ibso` WHERE alaabta_ibso.name = '$search_name' and status ='0'";
                     $ra = $db ->query($se);
                     if($ra){

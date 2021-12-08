@@ -15,7 +15,7 @@ function lonig($db){
             $row = $conn1->fetch_assoc();
             $date = $row['date2'];
             $days = date('d-m-Y');
-            if($date < $days){
+            if($date <= $days){
                 $data = array('status' => false,'data' => 'fadlan bixi lacagta biha');
             }else{
                 $_SESSION['shirkada'] = $row['id'];
@@ -39,7 +39,7 @@ function lonig($db){
                 $row2 = $conn4 ->fetch_assoc();
                 $date2 = $row2['date2'];
                 $days2 = date('d-m-Y');
-                if($date2 < $days2){
+                if($date2 <= $days2){
                     $data = array('status' => false,'data' => 'fadlan bixi lacagta biha');
                 }else{
                     $_SESSION['shirkada'] = $user_id;
